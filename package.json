@@ -1,0 +1,19 @@
+{
+  "name": "tokenator",
+  "version": "1.0.0",
+  "description": "Frontend module to retrieve tokens and implant them into forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadioSystems/npm-tokenator.git"
+  },
+  "author": "RSC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RadioSystems/npm-tokenator/issues"
+  },
+  "homepage": "https://github.com/RadioSystems/npm-tokenator#readme",
+}
