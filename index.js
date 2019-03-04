@@ -5,7 +5,11 @@ let fetchToken = async (tokenSource) => {
     return await fetch(tokenSource);
 };
 
-let Get = async (endpoint, tokenSource) => {
+let Get = async (tokenSource) => {
+    return await fetchToken(tokenSource);
+};
+
+let PopulateForms = async (endpoint, tokenSource) => {
     let token;
 
     const forms = Array.prototype.slice.call(document.querySelectorAll(`form[action=${endpoint}]`));
@@ -14,7 +18,7 @@ let Get = async (endpoint, tokenSource) => {
     }
 
     try {
-        token = await fetchToken(tokenSource);
+        token = await Get(tokenSource);
     } catch {
         console.error("Token Service is not responding or an error occurred.");
         return;
@@ -31,5 +35,6 @@ let Get = async (endpoint, tokenSource) => {
 };
 
 module.exports = {
+    PopulateForms,
     Get
 };
