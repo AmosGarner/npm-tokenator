@@ -5,11 +5,11 @@ let fetchToken = async (tokenSource) => {
     return await fetch(tokenSource);
 };
 
-let Get = async (tokenSource) => {
+let get = async (tokenSource) => {
     return await fetchToken(tokenSource);
 };
 
-let PopulateForms = async (endpoint, tokenSource) => {
+let populateForms = async (endpoint, tokenSource) => {
     let token;
 
     const forms = Array.prototype.slice.call(document.querySelectorAll(`form[action=${endpoint}]`));
@@ -35,6 +35,6 @@ let PopulateForms = async (endpoint, tokenSource) => {
 };
 
 module.exports = {
-    PopulateForms,
-    Get
+    populateForms,
+    get
 };
